@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #flowerImages {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        img {
+            width: 500px;
+            margin: 10px;
+        }
+        #flowerImages img:nth-child(1) {
+            order: 0; /* Center */
+        }
+        #flowerImages img:nth-child(2) {
+            order: 1; /* Right */
+        }
+        #flowerImages img:nth-child(3) {
+            order: -1; /* Left */
+        }
+        #clickButton {
+            background-color: white;
+            color: pink;
+            border: 2px solid pink;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #clickButton:hover {
+            background-color: pink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day</h1>
+    <h1>Flowers for You</h1>
+    <button id="clickButton">Click Here</button>
+    <div id="flowerImages">
+        <img src="ROOOOOOSEEEE.gif" alt="Flower 1">
+        <img src="ROSES55.gif" alt="Flower 2">
+        <img src="ROSES55.gif" alt="Flower 3">
+    </div>
+
+    <audio id="backgroundMusic" src="I Wanna Be Yours [nyuo9-OjNNg].mp3" preload="auto"></audio>
+
+    <script>
+        document.getElementById('clickButton').onclick = function() {
+            document.getElementById('flowerImages').style.display = 'flex';
+            document.getElementById('backgroundMusic').play();
+            this.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
